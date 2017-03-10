@@ -27,6 +27,13 @@ var Random = React.createClass({
     return 'rgb(' + ary.join(', ') + ')';
   },
 
+  rgbToHex: function (array) {
+    var r = array[0];
+    var g = array[1];
+    var b = array[2];
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  },
+
   isLight: function () {
     var rgb = this.state.color;
     return rgb.reduce(function(a,b){ return a+b; }) < 127 * 3;
@@ -52,6 +59,10 @@ var Random = React.createClass({
         </h1>
         <h2 className={this.isLight() ? 'white' : 'black'}>
           {this.formatColor(this.state.color)}
+        </h2>
+        <br/>
+        <h2 className={this.isLight() ? 'white' : 'black'}>
+          {this.rgbToHex(this.state.color)}
         </h2>
         <Button light={this.isLight()} onClick={this.handleClick}/>
       </div>
