@@ -48,8 +48,11 @@ var Random = React.createClass({
     return (
       <div>
         <h1 className={this.isLight() ? 'white' : 'black'}>
-          Your color is  {this.formatColor(this.state.color)}
+          Do You Need Some Color Inspiration?
         </h1>
+        <h2 className={this.isLight() ? 'white' : 'black'}>
+          {this.formatColor(this.state.color)}
+        </h2>
         <Button light={this.isLight()} onClick={this.handleClick}/>
       </div>
     );

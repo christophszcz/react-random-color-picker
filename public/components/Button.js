@@ -5,7 +5,7 @@ var Button = React.createClass({
 		return (
 			<button 
 				className={ this.props.light ? 'light-button' : 'dark-button' } onClick={this.props.onClick}>
-				Refresh
+				Random Color
 			</button>
 		);
 	}

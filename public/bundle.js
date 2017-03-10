@@ -19805,7 +19805,11 @@
 	      React.createElement(
 	        'h1',
 	        { className: this.isLight() ? 'white' : 'black' },
-	        'Your color is  ',
+	        'Do You Need Some Color Inspiration?'
+	      ),
+	      React.createElement(
+	        'h2',
+	        { className: this.isLight() ? 'white' : 'black' },
 	        this.formatColor(this.state.color)
 	      ),
 	      React.createElement(Button, { light: this.isLight(), onClick: this.handleClick })
@@ -19831,7 +19835,7 @@
 				'button',
 				{
 					className: this.props.light ? 'light-button' : 'dark-button', onClick: this.props.onClick },
-				'Refresh'
+				'Random Color'
 			);
 		}
 	});
