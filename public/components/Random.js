@@ -57,13 +57,14 @@ var Random = React.createClass({
         <h1 className={this.isLight() ? 'white' : 'black'}>
           Do You Need Some Color Inspiration?
         </h1>
-        <h2 className={this.isLight() ? 'white' : 'black'}>
-          {this.formatColor(this.state.color)}
-        </h2>
-        <br/>
-        <h2 className={this.isLight() ? 'white' : 'black'}>
-          {this.rgbToHex(this.state.color)}
-        </h2>
+        <div style={{ paddingBottom: '25px'}}>
+          <h2 className={this.isLight() ? 'white' : 'black'}>
+            Web Safe: {this.formatColor(this.state.color)} 
+          </h2>
+          <h2 className={this.isLight() ? 'white' : 'black'}>
+            Hex Code: {this.rgbToHex(this.state.color)}
+          </h2>
+        </div>
         <Button light={this.isLight()} onClick={this.handleClick}/>
       </div>
     );

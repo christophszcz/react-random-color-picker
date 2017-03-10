@@ -19815,15 +19815,20 @@
 	        'Do You Need Some Color Inspiration?'
 	      ),
 	      React.createElement(
-	        'h2',
-	        { className: this.isLight() ? 'white' : 'black' },
-	        this.formatColor(this.state.color)
-	      ),
-	      React.createElement('br', null),
-	      React.createElement(
-	        'h2',
-	        { className: this.isLight() ? 'white' : 'black' },
-	        this.rgbToHex(this.state.color)
+	        'div',
+	        { style: { paddingBottom: '25px' } },
+	        React.createElement(
+	          'h2',
+	          { className: this.isLight() ? 'white' : 'black' },
+	          'Web Safe: ',
+	          this.formatColor(this.state.color)
+	        ),
+	        React.createElement(
+	          'h2',
+	          { className: this.isLight() ? 'white' : 'black' },
+	          'Hex Code: ',
+	          this.rgbToHex(this.state.color)
+	        )
 	      ),
 	      React.createElement(Button, { light: this.isLight(), onClick: this.handleClick })
 	    );
