@@ -19754,6 +19754,13 @@
 	var Random = React.createClass({
 	  displayName: 'Random',
 
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      color: [17, 131, 254]
+	    };
+	  },
+
 	  componentDidMount: function componentDidMount() {
 	    this.applyColor();
 	  },
@@ -19789,7 +19796,13 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement('h1', { className: this.isLight() ? 'white' : 'black' })
+	      React.createElement(
+	        'h1',
+	        { className: this.isLight() ? 'white' : 'black' },
+	        'Your color is  ',
+	        this.formatColor(this.state.color)
+	      ),
+	      React.createElement(Button, { light: this.isLight() })
 	    );
 	  }
 	});

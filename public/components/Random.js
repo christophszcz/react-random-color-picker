@@ -5,10 +5,10 @@ var Random = React.createClass({
 
   getInitialState: function () {
     return {
-      color: [92, 132, 153]
+      color: [17, 131, 254]
     };
   },
-  
+
   componentDidMount: function () {
     this.applyColor();
   },
@@ -42,8 +42,9 @@ var Random = React.createClass({
     return (
       <div>
         <h1 className={this.isLight() ? 'white' : 'black'}>
-
+          Your color is  {this.formatColor(this.state.color)}
         </h1>
+        <Button light={this.isLight()}/>
       </div>
     );
   }
