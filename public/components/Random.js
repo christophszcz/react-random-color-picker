@@ -1,5 +1,5 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
+var Button = require('./Button');
 
 var Random = React.createClass({
   componentDidMount: function () {
@@ -42,7 +42,4 @@ var Random = React.createClass({
   }
 });
 
-ReactDOM.render(
-  <Random />, 
-  document.getElementById('app')
-);
+module.exports = Random;

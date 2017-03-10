@@ -1,5 +1,8 @@
-function greeter(){
-	document.write('From greeter function!');
-}
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Random = require('./components/Random');
 
-greeter();
+ReactDOM.render(
+  <Random />,
+  document.getElementById('app')
+);
