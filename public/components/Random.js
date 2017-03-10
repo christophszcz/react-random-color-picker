@@ -2,6 +2,13 @@ var React = require('react');
 var Button = require('./Button');
 
 var Random = React.createClass({
+
+  getInitialState: function () {
+    return {
+      color: [92, 132, 153]
+    };
+  },
+  
   componentDidMount: function () {
     this.applyColor();
   },
