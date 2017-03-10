@@ -19761,6 +19761,12 @@
 	    };
 	  },
 
+	  handleClick: function handleClick() {
+	    this.setState({
+	      color: this.chooseColor()
+	    });
+	  },
+
 	  componentDidMount: function componentDidMount() {
 	    this.applyColor();
 	  },
@@ -19802,7 +19808,7 @@
 	        'Your color is  ',
 	        this.formatColor(this.state.color)
 	      ),
-	      React.createElement(Button, { light: this.isLight() })
+	      React.createElement(Button, { light: this.isLight(), onClick: this.handleClick })
 	    );
 	  }
 	});
@@ -19824,7 +19830,7 @@
 			return React.createElement(
 				'button',
 				{
-					className: this.props.light ? 'light-button' : 'dark-button' },
+					className: this.props.light ? 'light-button' : 'dark-button', onClick: this.props.onClick },
 				'Refresh'
 			);
 		}
