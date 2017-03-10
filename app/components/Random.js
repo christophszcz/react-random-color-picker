@@ -65,7 +65,7 @@ var Random = React.createClass({
             Hex Code: {this.rgbToHex(this.state.color)}
           </h2>
         </div>
-        <Button light={this.isLight()} onClick={this.handleClick}/>
+        <Button light={this.isLight()} onClick={this.handleClick} />
       </div>
     );
   }
