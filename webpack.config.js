@@ -7,13 +7,14 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  module : {
-		loaders :[
+
+  module: {
+		loaders: [
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				loader: 'babel-loader', 
-				query : {
+				query: {
 					presets: ['es2015', 'react']
 				}
 			}
