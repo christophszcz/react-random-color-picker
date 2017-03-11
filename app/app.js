@@ -1,8 +1,8 @@
-var React = require('react'); ;; 
+var React = require('react');
 var ReactDOM = require('react-dom');
 var Random = require('./components/Random');
 
 ReactDOM.render(
   <Random />,
-  document.getElementById('app');
+  document.getElementById('app')
 );
