@@ -52,13 +52,9 @@
 
 	var _reactDom = __webpack_require__(158);
 
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../css/bootstrap.min.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../css/styles.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Random = __webpack_require__(161);
+	var Random = __webpack_require__(159);
 
 	ReactDOM.render(_react2.default.createElement(Random, null), document.getElementById('app'));
 
@@ -19753,15 +19749,13 @@
 
 
 /***/ },
-/* 159 */,
-/* 160 */,
-/* 161 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Button = __webpack_require__(162);
+	var Button = __webpack_require__(160);
 
 	var Random = React.createClass({
 	  displayName: 'Random',
@@ -19850,7 +19844,7 @@
 	module.exports = Random;
 
 /***/ },
-/* 162 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
